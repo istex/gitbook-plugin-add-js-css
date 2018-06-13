@@ -16,8 +16,8 @@ function getAssets() {
     var result;
     var book = this;
     var tmpobj = tmp.dirSync({ mode: 0755 });
-    var customJsFiles = getConfig(this,'pluginsConfig.custom-js-css.js', []);
-    var customCssFiles = getConfig(this,'pluginsConfig.custom-js-css.css', []);
+    var customJsFiles = getConfig(this,'pluginsConfig.add-js-css.js', []);
+    var customCssFiles = getConfig(this,'pluginsConfig.add-js-css.css', []);
     var jsfiles = [];
     var cssfiles = [];
 
@@ -75,8 +75,8 @@ module.exports = {
         "finish:before":function(){
             var book = this;
             var bookOutPath = book.output.root();
-            var customJsFiles = getConfig(this,'pluginsConfig.customJsCss.js', []);
-            var customCssFiles = getConfig(this,'pluginsConfig.customJsCss.css', []);
+            var customJsFiles = getConfig(this,'pluginsConfig.addJsCss.js', []);
+            var customCssFiles = getConfig(this,'pluginsConfig.addJsCss.css', []);
 
             customJsFiles.forEach(function(file) {
                 var origin =book.resolve(file);
