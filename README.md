@@ -21,7 +21,7 @@ put your js file and css file in the current book folder,for example in my book 
 
 ```json
 "pluginsConfig": {
-  "add-js-css": {
+  "custom-js-css": {
     "js": [
       "./my/my.js"
     ],
