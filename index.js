@@ -15,9 +15,9 @@ function getConfig(context, property, defaultValue) {
 function getAssets() {
     var result;
     var book = this;
-    var tmpobj = tmp.dirSync();
-    var customJsFiles = getConfig(this,'pluginsConfig.custom-js-css.js', []);
-    var customCssFiles = getConfig(this,'pluginsConfig.custom-js-css.css', []);
+    var tmpobj = tmp.dirSync({ mode: 0755 });
+    var customJsFiles = getConfig(this,'pluginsConfig.add-js-css.js', []);
+    var customCssFiles = getConfig(this,'pluginsConfig.add-js-css.css', []);
     var jsfiles = [];
     var cssfiles = [];
 
