@@ -75,8 +75,8 @@ module.exports = {
         "finish:before":function(){
             var book = this;
             var bookOutPath = book.output.root();
-            var customJsFiles = getConfig(this,'pluginsConfig.addJsCss.js', []);
-            var customCssFiles = getConfig(this,'pluginsConfig.addJsCss.css', []);
+            var customJsFiles = getConfig(this,'pluginsConfig.customJsCss.js', []);
+            var customCssFiles = getConfig(this,'pluginsConfig.customJsCss.css', []);
 
             customJsFiles.forEach(function(file) {
                 var origin =book.resolve(file);
